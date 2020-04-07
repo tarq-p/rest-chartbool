@@ -54,14 +54,20 @@ $(document).ready(function () {
     });
 
 
-    // var ctx = $('#grafico');
-    // var chart = new Chart(ctx, {
-    //
-    //     type: 'line',
-    //     data: data,
-    //     options: options
-    //
-    // });
-
+    function Totale(labels, data){
+        var ctx = $('#grafico');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Fatturato Mensile 2017',
+                    backgroundColor: 'lightgrey',
+                    borderColor: 'grey',
+                    data: data
+                }]
+            },
+        });
+    };
 
 });
